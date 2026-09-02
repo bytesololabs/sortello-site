@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bytesololabs.sortello",
+      "sha256_cert_fingerprints": [
+        "72:4B:AF:AD:2D:8C:39:DB:4D:FB:57:D2:6F:37:0C:99:71:93:26:2A:ED:3D:C7:CF:34:94:A4:B7:81:ED:3E:F1"
+      ]
+    }
+  }
+]
