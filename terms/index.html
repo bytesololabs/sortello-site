@@ -10,17 +10,19 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-color: #141414;
-      --card-bg: #1A1A1E;
+      --bg-radial: radial-gradient(120% 120% at 50% -8%, #1F1F1F 0%, #0F0F0F 100%);
+      --card-bg: rgba(26, 26, 30, 0.85);
       --card-border: rgba(255, 255, 255, 0.08);
       --accent-green: #61CE78;
+      --accent-gold: #F2C94C;
       --text-main: #FFFFFF;
-      --text-muted: rgba(255, 255, 255, 0.65);
-      --text-dim: rgba(255, 255, 255, 0.4);
+      --text-wordmark: #FAF6F0;
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --text-dim: rgba(255, 255, 255, 0.42);
     }
 
     * {
@@ -31,20 +33,21 @@
 
     body {
       font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--bg-color);
+      background: var(--bg-radial);
+      background-color: #0F0F0F;
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      line-height: 1.6;
-      padding: 32px 16px;
+      line-height: 1.65;
+      padding: 36px 16px 48px;
       -webkit-font-smoothing: antialiased;
     }
 
     .container {
       width: 100%;
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
@@ -52,53 +55,83 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--card-border);
+    }
+
+    .brand-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(97, 206, 120, 0.25);
+    }
+
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--text-wordmark);
     }
 
     .back-link {
       color: var(--accent-green);
       text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13.5px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      transition: opacity 0.2s ease;
     }
 
-    .brand-tag {
-      font-size: 13px;
-      color: var(--text-dim);
-      font-weight: 700;
-      letter-spacing: 1px;
+    .back-link:hover {
+      opacity: 0.85;
+    }
+
+    .title-area {
+      margin-bottom: 28px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 800;
-      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #FFFFFF 60%, var(--accent-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .updated-date {
       font-size: 13px;
       color: var(--text-dim);
-      margin-bottom: 28px;
+      font-weight: 500;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 28px 24px;
-      margin-bottom: 20px;
+      border-radius: 18px;
+      padding: 26px 24px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     h2 {
       font-size: 18px;
       font-weight: 700;
       color: #FFFFFF;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     p {
@@ -113,7 +146,7 @@
 
     footer {
       text-align: center;
-      padding: 40px 0 20px;
+      padding: 36px 0 12px;
       font-size: 13px;
       color: var(--text-dim);
     }
@@ -122,46 +155,60 @@
       color: var(--text-muted);
       text-decoration: none;
     }
+
+    footer a:hover {
+      color: var(--accent-green);
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <div class="header-nav">
-      <a href="../" class="back-link">← Back to Sortello</a>
-      <span class="brand-tag">BYTESOLO LABS</span>
+      <a href="../" class="brand-group">
+        <img src="../icon.png" alt="Sortello Icon" class="brand-logo">
+        <span class="brand-title">SORTELLO</span>
+      </a>
+      <a href="../" class="back-link">← Back to Home</a>
     </div>
 
-    <h1>Terms of Service</h1>
-    <div class="updated-date">Last Updated: August 18, 2026</div>
+    <div class="title-area">
+      <h1>Terms of Service</h1>
+      <div class="updated-date">Effective Date: October 21, 2026</div>
+    </div>
 
     <div class="card">
       <h2>1. Acceptance of Terms</h2>
-      <p>By accessing or playing Sortello (available on web and mobile devices), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use Sortello.</p>
+      <p>By downloading, installing, or playing Sortello (available on Android, Reddit, and web), you agree to be bound by these Terms of Service. If you do not agree to these terms, please discontinue use of the application.</p>
     </div>
 
     <div class="card">
       <h2>2. Use License</h2>
-      <p>ByteSolo Labs grants you a personal, non-exclusive, non-transferable, revocable license to play Sortello for personal, non-commercial entertainment purposes.</p>
+      <p>ByteSolo Labs grants you a personal, revocable, non-exclusive, non-transferable license to access and play Sortello for personal, non-commercial entertainment purposes in accordance with these Terms.</p>
     </div>
 
     <div class="card">
-      <h2>3. Intellectual Property</h2>
-      <p>All game designs, graphics, branding, algorithms, solver code, audio-visual effects, and logos are the proprietary property of ByteSolo Labs and protected by applicable copyright and trademark laws.</p>
+      <h2>3. Intellectual Property Rights</h2>
+      <p>All game mechanics, puzzle layouts, solver algorithms, sound effects, visual animations, trademarks, and the Sortello wordmark and logo are the exclusive intellectual property of ByteSolo Labs and are protected under international copyright and trademark laws.</p>
     </div>
 
     <div class="card">
-      <h2>4. Disclaimer & Limitation of Liability</h2>
-      <p>Sortello is provided "as is" without warranties of any kind. ByteSolo Labs is not liable for any damages or data loss resulting from the use or inability to use the game.</p>
+      <h2>4. User Conduct & Fairness</h2>
+      <p>You agree not to reverse engineer, decompile, exploit, or create unauthorized automated bots for Sortello or interfere with other players' fair enjoyment of daily challenges and community competitions.</p>
     </div>
 
     <div class="card">
-      <h2>5. Contact</h2>
-      <p>For questions regarding these Terms, contact <strong>support@bytesololabs.com</strong>.</p>
+      <h2>5. Disclaimer & Limitation of Liability</h2>
+      <p>Sortello is provided on an "as is" and "as available" basis without express or implied warranties of any kind. ByteSolo Labs shall not be liable for any indirect, incidental, or consequential damages resulting from your access to or use of the game.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Governing Law & Contact</h2>
+      <p>These Terms shall be governed by and construed in accordance with applicable laws. For questions regarding these Terms, contact us at <a href="mailto:support@bytesololabs.com" style="color: var(--accent-green); text-decoration: none;">support@bytesololabs.com</a>.</p>
     </div>
 
     <footer>
-      <p>© 2026 ByteSolo Labs. All rights reserved.</p>
+      <p>© 2026 ByteSolo Labs. All rights reserved. &bull; <a href="../privacy/">Privacy Policy</a></p>
     </footer>
   </div>
 

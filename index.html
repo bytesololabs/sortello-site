@@ -3,64 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sortello - Your Daily Sorting Game</title>
+  <title>Sortello — Daily Color Sorting Logic Puzzle</title>
+  <meta name="description" content="Play Sortello, the daily color tube sorting logic puzzle by ByteSolo Labs. Solve challenges with minimal moves.">
+  <meta name="theme-color" content="#141414">
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-radial: radial-gradient(120% 120% at 50% -8%, #1F1F1F 0%, #0F0F0F 100%);
+      --accent-green: #61CE78;
+      --accent-gold: #F2C94C;
+      --text-wordmark: #FAF6F0;
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --text-dim: rgba(255, 255, 255, 0.42);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at center, #1E1A2B 0%, #100E17 100%);
+      justify-content: space-between;
+      background: var(--bg-radial);
+      background-color: #0F0F0F;
       color: #FFFFFF;
       font-family: 'Outfit', sans-serif;
       text-align: center;
-      padding: 24px;
+      padding: 32px 20px 24px;
+      -webkit-font-smoothing: antialiased;
     }
+
     .container {
       max-width: 480px;
+      margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
+
     .logo {
-      width: 88px;
-      height: 88px;
-      border-radius: 22px;
-      box-shadow: 0 12px 32px rgba(158, 149, 255, 0.25);
-      margin-bottom: 8px;
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(97, 206, 120, 0.25), 0 2px 8px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 6px;
     }
+
     h1 {
-      font-size: 38px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      background: linear-gradient(135deg, #FFFFFF 30%, #F2C94C 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: var(--text-wordmark);
     }
-    p {
-      font-size: 18px;
+
+    p.tagline {
+      font-size: 17px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.70);
-      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      letter-spacing: 0.4px;
+      max-width: 360px;
+      line-height: 1.5;
+    }
+
+    .badges-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .badge-pill {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      color: var(--accent-gold);
+    }
+
+    footer {
+      width: 100%;
+      max-width: 600px;
+      padding: 24px 0 12px;
+      font-size: 13px;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent-green);
     }
   </style>
 </head>
 <body>
+  <div></div>
   <main class="container">
     <img src="icon.png" alt="Sortello Logo" class="logo">
-    <h1>Sortello</h1>
-    <p>Your daily sorting game.</p>
+    <h1>SORTELLO</h1>
+    <p class="tagline">Your daily color-sorting logic puzzle.</p>
+    <div class="badges-row">
+      <span class="badge-pill">Daily Challenge</span>
+      <span class="badge-pill">Zero Ads While Playing</span>
+      <span class="badge-pill">Archive Vault</span>
+    </div>
   </main>
+  <footer>
+    <p>© 2026 ByteSolo Labs. All rights reserved.</p>
+    <div style="margin-top: 8px;">
+      <a href="privacy/">Privacy Policy</a>
+      <span>&bull;</span>
+      <a href="terms/">Terms of Service</a>
+      <span>&bull;</span>
+      <a href="mailto:support@bytesololabs.com">Contact</a>
+    </div>
+  </footer>
 </body>
 </html>
